@@ -12,7 +12,7 @@ docker push alexmocanu/multi-server:$SHA
 docker push alexmocanu/multi-worker:$SHA
 
 # Apply Kubernetes config files
-kuberctl apply -f k8s
+kubectl apply -f k8s
 
 # Set Docker image for Kubernetes cluster
 kubectl set image deployments/server-deployment server=alexmocanu/multi-server:$SHA
